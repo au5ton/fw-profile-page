@@ -269,9 +269,8 @@
     <script type="text/JavaScript">
 
     $('.backbutton').on('click tap', function(){
-        if(window.history.back() === undefined) {
-            window.location = 'http://108.197.28.233/';
-        }
+        window.history.back();
+        window.location = 'http://108.197.28.233/';
     });
 
     function adjust() {
