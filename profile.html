@@ -242,14 +242,25 @@
         z-index: 100;
     }
 
+    .metfan_and_fish {
+        width: 50px;
+        height: 50px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        transition: all 0.5s;
+    }
+    .metfan_and_fish_hover {
+        width: 40vw!important;
+        height: 40vw!important;
+    }
+
     </style>
 
 </head>
 <body>
 
     <a class="btn-floating btn-large waves-effect waves-light red animated2 backbutton"><i class="material-icons">arrow_back</i></a>
-
-    <span class="greeting animated2">Hello</span>
 
     <div class="container">
         <div class="valign-wrapper">
@@ -266,6 +277,8 @@
         </div>
     </div>
 
+    <img class="metfan_and_fish" src="metfan+fish.jpg" alt="metfan+fish 5ever">
+
     <script type="text/JavaScript">
 
     $('.backbutton').on('click tap', function(){
@@ -273,24 +286,16 @@
         window.location = 'http://108.197.28.233/';
     });
 
+    $('.metfan_and_fish').on('mouseover', function() {
+        $('.metfan_and_fish').addClass('metfan_and_fish_hover');
+    });
+    $('.metfan_and_fish').on('mouseout', function() {
+        $('.metfan_and_fish').removeClass('metfan_and_fish_hover');
+    });
+
     function adjust() {
         $('.backbutton').css('top',$('.b-card')[0].offsetTop - 28);
         $('.backbutton').css('left',$('.b-card')[0].offsetLeft - 28);
-
-        $('.greeting').css('top',$('.b-card')[0].offsetTop - 28);
-        $('.greeting').css('left',$('.b-card')[0].offsetLeft + 42);
-    }
-    function properGreeting() {
-        var d = new Date();
-        if(d.getHours() >= 18 || d.getHours() < 4) {
-            $('.greeting').html('Good evening!');
-        }
-        else if(d.getHours() >= 4 && d.getHours() <= 12) {
-            $('.greeting').html('Good morning!');
-        }
-        else if(d.getHours() > 12 && d.getHours() < 18) {
-            $('.greeting').html('Good afternoon!');
-        }
     }
 
     $(document).ready(function(){
@@ -308,7 +313,6 @@
             $('h5').css('color','#fff');
             $('.b-card').css('background-color','#444');
         }
-        properGreeting()
 
     });
     window.onresize = function() {
@@ -317,7 +321,6 @@
         }
         else {
             $('.backbutton').attr('style','');
-            $('.greeting').attr('style','');
         }
     }
 
