@@ -1,0 +1,108 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Metfan | Fluff World 2.0</title>
+    <meta name="description" content="">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <style>
+
+    /* CSS goes here */
+
+    body {
+        background: url('slayer.jpg') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
+    h1, p {
+        color: #00ffff;
+        font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
+        font-weight: bold;
+    }
+
+    h1 {
+        font-size: 72pt;
+        width: 1000px;
+        height: 150px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -500px;
+        margin-top: -75px;
+    }
+
+    .name {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .soot {
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        margin: 0;
+        padding: 0;
+    }
+
+    </style>
+
+</head>
+<body>
+    <audio id="slayer-sound" src="slayer2.mp3"></audio>
+
+
+    <h1 id="slayer">FUCKING SLAYER</h1>
+    <p class="name">
+        You can: use my real name in the chat if you would like
+    </p>
+    <p class="soot">
+        profile by soot
+    </p>
+
+    <script>
+
+    function random() {
+
+        var x = Math.floor(Math.random() * 50);
+
+        if(x % 2 === 0) {
+            return -x;
+        }
+        else {
+            return x;
+        }
+    }
+    function random2() {
+
+        var x = Math.floor(Math.random() * 10);
+
+        if(x % 2 === 0) {
+            return -x;
+        }
+        else {
+            return x;
+        }
+    }
+
+    $(document).ready(function(){
+        document.getElementById('slayer-sound').setAttribute('autoplay','true');
+
+        setInterval(function(){
+            document.getElementById('slayer').style.transform = 'translateX('+random()+'px) translateY('+random()+'px)';
+            document.body.style.backgroundPosition = ''+random2()+'px '+random2()+'px';
+        },50);
+
+    });
+
+    </script>
+
+</body>
+</html>
