@@ -56,7 +56,11 @@
 
 </head>
 <body>
-    <audio id="slayer-sound" src="http://www.austinj.net/fw-profile-page/metfan/slayer2.mp3"></audio>
+    <audio id="slayer-sound">
+        <!-- <source src="slayer2.mp3" type="audio/mp3" /> -->
+        <source src="http://www.austinj.net/fw-profile-page/metfan/slayer2.ogg" type="audio/ogg" />
+        <source src="http://www.austinj.net/fw-profile-page/metfan/slayer2.m4a" type="audio/mpeg" />
+    </audio>
 
 
     <h1 id="slayer">FUCKING SLAYER</h1>
@@ -93,7 +97,7 @@
     }
 
     $(document).ready(function(){
-        document.getElementById('slayer-sound').play();
+        document.getElementById('slayer-sound').setAttribute('autoplay','true');
 
         setInterval(function(){
             document.getElementById('slayer').style.transform = 'translateX('+random()+'px) translateY('+random()+'px)';
