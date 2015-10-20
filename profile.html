@@ -8,10 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">
+    <link rel="stylesheet" href="materialize/css/materialize.min.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/js/materialize.min.js"></script>
+    <script src="materialize/js/materialize.min.js"></script>
     <style>
 
     @-webkit-keyframes dropDown{0%{opacity:0;filter:alpha(opacity=0);-webkit-transform:translateY(-100px);transform:translateY(-100px)}100%{opacity:1;filter:alpha(opacity=100);-webkit-transform:translateY(0);transform:translateY(0)}}@keyframes dropDown{0%{opacity:0;filter:alpha(opacity=0);-webkit-transform:translateY(-100px);transform:translateY(-100px)}100%{opacity:1;filter:alpha(opacity=100);-webkit-transform:translateY(0);transform:translateY(0)}}@-webkit-keyframes dropUp{0%{opacity:0;filter:alpha(opacity=0);-webkit-transform:translateY(100px);transform:translateY(100px)}100%{opacity:1;filter:alpha(opacity=100);-webkit-transform:translateY(0);transform:translateY(0)}}@keyframes dropUp{0%{opacity:0;filter:alpha(opacity=0);-webkit-transform:translateY(100px);transform:translateY(100px)}100%{opacity:1;filter:alpha(opacity=100);-webkit-transform:translateY(0);transform:translateY(0)}}@-webkit-keyframes popIn{0%{-webkit-transform:scaleY(0) scaleX(0);transform:scaleY(0) scaleX(0);opacity:1;filter:alpha(opacity=100)}5%{-webkit-transform:scaleY(0) scaleX(.001);transform:scaleY(0) scaleX(.001)}50%{-webkit-transform:scaleY(1) scaleX(.001);transform:scaleY(1) scaleX(.001)}100%{-webkit-transform:scaleY(1) scaleX(1);transform:scaleY(1) scaleX(1);opacity:1;filter:alpha(opacity=100)}}@keyframes popIn{0%{-webkit-transform:scaleY(0) scaleX(0);transform:scaleY(0) scaleX(0);opacity:1;filter:alpha(opacity=100)}5%{-webkit-transform:scaleY(0) scaleX(.001);transform:scaleY(0) scaleX(.001)}50%{-webkit-transform:scaleY(1) scaleX(.001);transform:scaleY(1) scaleX(.001)}100%{-webkit-transform:scaleY(1) scaleX(1);transform:scaleY(1) scaleX(1);opacity:1;filter:alpha(opacity=100)}}
@@ -75,7 +75,7 @@
     html, body {
         width: 100%;
         height: 100%;
-        font-family: 'Roboto', sans-serif;
+        font-family: system, -apple-system, 'Roboto', sans-serif;
         -webkit-font-smoothing: antialiased;
         position: absolute;
         top: 0;
@@ -105,17 +105,17 @@
         background-color: #fafafa;
         box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
         padding: 20px;
-        opacity: 0;
+        max-width: 450px;
     }
 
     .brand {
         font-weight: 300;
-        font-size: 3.6rem;
+        font-size: 2.5rem;
     }
 
     .subtitle, .social-media {
         font-weight: 300;
-        /* font-family: 'Crimson Text', serif; */
+        font-size: 1.1rem;
     }
 
     .sub-1 {
@@ -123,46 +123,6 @@
     }
     .sub-2 {
         margin-top: 0;
-    }
-
-    @media (max-width: 414px) {
-        .subtitle {
-            /*font-size: 1.4rem;*/
-        }
-
-        .social-media {
-            font-size: 1.6rem;
-        }
-    }
-
-    @media (max-width: 375px) {
-        .subtitle {
-            /*font-size: 1.4rem;*/
-        }
-
-        .social-media {
-            font-size: 1.4rem;
-        }
-    }
-
-    @media (max-width: 360px) {
-        .subtitle {
-            font-size: 1.5rem;
-        }
-
-        .social-media {
-            font-size: 1.3rem;
-        }
-    }
-
-    @media (max-width: 320px) {
-        .subtitle {
-            font-size: 1.4rem;
-        }
-
-        .social-media {
-            font-size: 1.2rem;
-        }
     }
 
     a {
@@ -255,56 +215,137 @@
         height: 40vw!important;
     }
 
+    .hidden {
+        opacity: 0;
+    }
+
+    .ninja {
+        display: none!important;
+    }
+
+    #world {
+        /* Birthday */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .birthday-balloons {
+        position: fixed;
+        width: 100px;
+        transition: transform 10s;
+        transform: translateY(300px);
+    }
+
+    #balloons1 {
+        bottom: calc(-125px - 500px);
+        left: 50px;
+        /*transform: translateY(300px);*/
+    }
+    #balloons2 {
+        bottom: calc(-125px - 300px);
+        right: 50px;
+        /*transform: translateY(300px);*/
+    }
+    #balloons3 {
+        bottom: calc(-125px - 100px);
+        left: 50%;
+        /*transform: translateY(300px);*/
+    }
+
     </style>
 
 </head>
 <body>
 
     <a class="btn-floating btn-large waves-effect waves-light red animated2 backbutton"><i class="material-icons">arrow_back</i></a>
+    <canvas id="world"></canvas>
 
     <div class="container">
         <div class="valign-wrapper">
             <div class="valign">
                 <div class="b-card card animated">
                     <h3 class="brand"><span class="embed-user soot">soot</span></h3>
+                    <p class="caption ninja">October 22</p>
                     <h5 class="subtitle sub-1">You can't use my name in the chat.</h5>
                     <h5 class="social-media">Fluff mother: <span class="embed-user zzz">zzz</span></h5>
                     <h5 class="social-media">Fluff children: <span class="embed-user qwert123">QWERT123</span>, <span class="embed-user person">person</span>, <span class="embed-user lobster">lobster</span>, <span class="embed-user TheShinyG">TheShinyG</span>, <span class="embed-user IHateBiscuits">IHateBiscuits</span></h5>
                     <h5 class="social-media">Developer of the <a href="https://github.com/au5ton/FWMobile">Fluff World iOS app</a>.</h5>
-                    <h5 class="social-media"><a href="http://kik.me/macphage">Kik (macphage)</a>, <a href="skype:macphage_?userinfo">Skype (macphage_)</a>.</h5>
+                    <h5 class="social-media"><a href="http://kik.me/macphage">Kik (macphage)</a></h5>
+                    <h5 class="social-media"><a href="skype:macphage_?userinfo">Skype (macphage_)</a></h5>
+                    <h5 class="social-media"><a href="https://chrome.google.com/webstore/detail/oocgkbbkleomoojomjlaidecopfcieja">FWExtras (BETA)</a></h5>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- <img class="metfan_and_fish" src="http://www.austinj.net/fw-profile-page/metfan+fish.jpg" alt="metfan+fish 5ever"> -->
+    <img class="metfan_and_fish hidden" src="http://www.austinj.net/fw-profile-page/metfan+fish.jpg" alt="metfan+fish 5ever">
+    <img id="balloons1" class="birthday-balloons ninja" src="http://www.austinj.net/fw-profile-page/balloons2.png">
+    <div class="balloons-container">
 
+    </div>
+
+    <script src="http://www.austinj.net/fw-profile-page/confetti.js"></script>
     <script type="text/JavaScript">
+
+    var forceDaytime = true;
 
     $('.backbutton').on('click tap', function(){
         window.history.back();
         window.location = 'http://108.197.28.233/';
     });
 
-    // $('.metfan_and_fish').on('mouseover', function() {
-    //     $('.metfan_and_fish').addClass('metfan_and_fish_hover');
-    // });
-    // $('.metfan_and_fish').on('mouseout', function() {
-    //     $('.metfan_and_fish').removeClass('metfan_and_fish_hover');
-    // });
+    $('.metfan_and_fish').on('mouseover', function() {
+        $('.metfan_and_fish').addClass('metfan_and_fish_hover');
+    });
+    $('.metfan_and_fish').on('mouseout', function() {
+        $('.metfan_and_fish').removeClass('metfan_and_fish_hover');
+    });
+
+    setTimeout(function(){
+        $('.metfan_and_fish').removeClass('hidden');
+    },1000*60*10); //20 minutes
 
     function adjust() {
         $('.backbutton').css('top',$('.b-card')[0].offsetTop - 28);
         $('.backbutton').css('left',$('.b-card')[0].offsetLeft - 28);
     }
 
+    function random() {
+        var x = Math.floor(Math.random() * 800) + document.body.clientHeight + 200;
+        return x;
+    }
+    function random2() {
+        var x = Math.floor(Math.random() * document.body.clientWidth);
+        return x;
+    }
+
     $(document).ready(function(){
+
+        var d = new Date();
+        //d.getMonth() === 9 && d.getDate() === 22
+        //If it's my birthday!
+        if(true) {
+            $('.soot').html('Happy Birthday, soot!');
+            $('.caption').removeClass('ninja');
+            runConfetti();
+
+            var balloonCount = 50;
+            for(var i = 0; i < balloonCount; i++) {
+                $('#balloons1').clone().attr('id','').removeClass('ninja').css('left',random2()+'px').appendTo('.balloons-container');
+            }
+            for(var i = 0; i < $('.birthday-balloons').length; i++) {
+                $('.birthday-balloons')[i].style.transform = 'translateY('+(-random())+'px)';
+            }
+        }
+
         if(document.body.clientWidth > 992) {
             adjust();
         }
 
-        var d = new Date();
-        if(d.getHours() >= 20 || d.getHours() < 6) {
+        if((d.getHours() >= 20 || d.getHours() < 6) && forceDaytime === false) {
             //night mode
             document.body.style.color = '#fff';
             document.body.style.backgroundColor = '#2f2f2f';
@@ -323,8 +364,6 @@
             $('.backbutton').attr('style','');
         }
     }
-
-
 
     </script>
 
