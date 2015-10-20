@@ -294,7 +294,7 @@
 
     setTimeout(function(){
         $('.metfan_and_fish').removeClass('hidden');
-    },1000*60*10); //20 minutes
+    },1000*60*10); //10 minutes
 
     function adjust() {
         $('.backbutton').css('top',$('.b-card')[0].offsetTop - 28);
@@ -302,11 +302,11 @@
     }
 
     function random() {
-        var x = Math.floor(Math.random() * 800) + document.body.clientHeight + 200;
+        var x = Math.floor(Math.random() * 2000) + document.body.clientHeight + 200;
         return x;
     }
     function random2() {
-        var x = Math.floor(Math.random() * document.body.clientWidth);
+        var x = Math.floor(Math.random() * document.body.clientWidth) - 50;
         return x;
     }
 
@@ -320,6 +320,17 @@
             runConfetti();
 
             var balloonCount = 50;
+
+            if(document.body.clientWidth > 919) {
+                balloonCount = 100;
+            }
+            if(document.body.clientWidth > 1200) {
+                balloonCount = 200;
+            }
+            if(document.body.clientWidth > 1500) {
+                balloonCount = 300;
+            }
+
             for(var i = 0; i < balloonCount; i++) {
                 $('#balloons1').clone().attr('id','').removeClass('ninja').css('left',random2()+'px').appendTo('.balloons-container');
             }
