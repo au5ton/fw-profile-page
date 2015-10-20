@@ -325,9 +325,8 @@
     $(document).ready(function(){
 
         var d = new Date();
-        //d.getMonth() === 9 && d.getDate() === 22
         //If it's my birthday!
-        if(true) {
+        if(d.getMonth() === 9 && (d.getDate() === 21 || d.getDate() === 22 || d.getDate() === 23)) {
             $('.soot').html('Happy Birthday, soot!');
             $('.caption').removeClass('ninja');
             runConfetti();
