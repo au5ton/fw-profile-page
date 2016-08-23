@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
 
     <link rel="stylesheet" href="https://sooot.github.io/cdn/materialize-v0.97.7/css/materialize.nofont.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.1.0/octicons.min.css">
+    <link rel="stylesheet" href="http://sooot.github.io/cdn/octicons-4.3.0/octicons.min.css">
     <link rel="stylesheet" href="https://sooot.github.io/embed-user.css">
 
     <style>
@@ -73,7 +73,17 @@
     }
     .section li {
         font-size: 1.3rem;
+        margin-top: 0.3rem;
+        margin-bottom: 0.3rem;
     }
+    /*.section li::before {
+        font-family: octicons;
+        font-size: 0.9em;
+        content: '\f05d';
+    }
+    .section li.award::before {
+        content: '';
+    }*/
     .section > * {
         margin-top: 0;
         margin-bottom: 0;
@@ -114,6 +124,10 @@
     }
     blockquote::after {
         content: '”';
+    }
+
+    .strike {
+        text-decoration: line-through;
     }
 
     </style>
@@ -164,16 +178,18 @@
             <h1>Known For</h1>
             <p class="flow-text">
                 <ul>
-                    <li class="award">
-                        <span class="octicon octicon-star"></span> Fluff Award recipient for: Best Profile (11 votes, 2015) <span class="octicon octicon-star"></span>
-                    </li>
-                    <li class="award">
-                        <span class="octicon octicon-star"></span> Fluff Award recipient for: Most Productive (10 votes, 2015) <span class="octicon octicon-star"></span>
-                    </li>
-                    <li class="award">
-                        <span class="octicon octicon-star"></span> Fluff Award recipient for: Best Catchphrase (7 votes, 2015) <span class="octicon octicon-star"></span>
-                    </li>
-                    <li class="award">
+                    <div class="megaphone">
+                        <li class="award">
+                            <span class="octicon octicon-star"></span> Fluff Award recipient for: Best Profile (11 votes, 2015) <span class="octicon octicon-star"></span>
+                        </li>
+                        <li class="award">
+                            <span class="octicon octicon-star"></span> Fluff Award recipient for: Most Productive (10 votes, 2015) <span class="octicon octicon-star"></span>
+                        </li>
+                        <li class="award">
+                            <span class="octicon octicon-star"></span> Fluff Award recipient for: Best Catchphrase (7 votes, 2015) <span class="octicon octicon-star"></span>
+                        </li>
+                    </div>
+                    <li>
                         The user who programmatically spammed the imageboard with pokémon and killed it.
                     </li>
                     <li>
