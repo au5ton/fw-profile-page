@@ -7,31 +7,96 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.1.0/octicons.min.css">
+    <link rel="stylesheet" href="https://sooot.github.io/cdn/materialize-v0.97.7/css/materialize.nofont.min.css">
+    <link rel="stylesheet" href="http://sooot.github.io/cdn/octicons-4.3.0/octicons.min.css">
+    <link rel="stylesheet" href="https://sooot.github.io/embed-user.css">
 
     <style>
 
-    a, h3, h5 {
-        transition: color 0.5s;
+    html {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     }
-
     body {
         color: rgb(214, 227, 239);
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
         background-color: rgb(1, 87, 155);
         padding: 20px;
         font-size: 1.1rem;
         width: 100%;
     }
 
-    h1.bigname {
-        margin: 0;
-        margin-bottom: 0.75em;
+    .bold {
+        font-weight: bold;
+    }
+    .italic {
+        font-style: italic;
+    }
+    .strike {
+        text-decoration: line-through;
     }
 
-    h5.disclaimer {
-        margin-bottom: 1.1em;
+    .card-panel {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .card-panel.card-picture {
+        padding: 0;
+        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
+        /*width: 250px;*/
+    }
+    .card-panel.card-picture img {
+        display: block;
+        border-radius: 2px;
+    }
+
+    h1.section, h2.section, h3.section, h4.section, h5.section {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .hero h1 small {
+        display: block;
+        font-size: 25%;
+        line-height: 1em;
+        font-weight: 400;
+        font-style: italic;
+    }
+
+    .hero h5 {
+        font-size: 1.33rem;
+        font-weight: 400;
+    }
+
+    .section h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+    }
+    .section li {
+        font-size: 1.3rem;
+        margin-top: 0.3rem;
+        margin-bottom: 0.3rem;
+    }
+    /*.section li::before {
+        font-family: octicons;
+        font-size: 0.9em;
+        content: '\f05d';
+    }
+    .section li.award::before {
+        content: '';
+    }*/
+    .section > * {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .megaphone {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .award, .important {
+        color: #ffe119;
     }
 
     a {
@@ -48,223 +113,6 @@
         color: #ffc554;
     }
 
-    .divider {
-        padding-bottom: 20px;
-        visibility: hidden;
-    }
-
-    .section {
-        padding-top: 0;
-        padding-bottom: 0;
-        padding-left: 20px;
-    }
-
-    .embed-user {
-        padding-left: 3px;
-        padding-right: 3px;
-        border-radius: 3px;
-        text-decoration: none;
-        font-size: 1.0em;
-        /* Default colors */
-        color: #FFFFFF;
-        background-color: #3D3C3A;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-    .NaN {
-        color: #97007E;
-        background-color: #FFF;
-        font-family: 'Lucida Console', Monaco, monospace;
-        box-shadow: 0px 1px 2px rgba(0,0,0,0.5);
-    }
-    .soot {
-        color: rgb(214, 227, 239);
-        font-family: 'Roboto', sans-serif;
-        background-color: rgb(1, 87, 155);
-    }
-    .zzz {
-        color: #00bcf8;
-        background-color: #494c64;
-        font-family: Georgia, serif
-    }
-    .qwert123 {
-        color: #ffffff;
-        background-color: #0080ff;
-        font-family: Arial, Helvetica, sans-serif
-    }
-    .Lynx {
-        color: #504A4B;
-        background-color: #11cee3;
-        font-family: 'Comic Sans', 'Comic Sans MS', 'Chalkboard', 'ChalkboardSE-Regular', sans-serif;
-    }
-    .lobster {
-        color: #96e0fc;
-        background-color: #ff0000;
-        font-family: Arial, Helvetica, sans-serif
-    }
-    .TheShinyG {
-        color: rgb(255, 255, 255);
-        background-color: rgb(255, 191, 0);
-        font-family: 'Comic Sans', 'Comic Sans MS', Chalkboard, ChalkboardSE-Regular, sans-serif;
-    }
-    .IHateBiscuits {
-        color: #00ffff;
-        background-color: #ff8000;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-    .yousea {
-        color: #ff66ff;
-        background-color: #000000;
-        font-family: 'Lato', sans-serif
-    }
-    .BootySnatcher {
-        color: #ff80c0;
-        background-color: #ffffff;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-
-    .Metfan {
-        color: #00ffff;
-        background-color: #000000;
-        font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
-    }
-    .CheeseCum {
-        color: #ea5515;
-        background-color: #00ff00;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-    .Fluff {
-        color: #00ff00;
-        background-color: #000000;
-        font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
-    }
-    .Rez {
-        color: #b6b6b4;
-        background-color: #000000;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-    .LordSuperGuruKami {
-        color: #990012;
-        background-color: #FDD017;
-        font-family: 'Comic Sans', 'Comic Sans MS', 'Chalkboard', 'ChalkboardSE-Regular', sans-serif;
-    }
-    .Pleepster, .Pleep {
-        color: #c12267;
-        background-color: #000000;
-        font-family: 'Courier New', Courier, monospace
-    }
-    .Zoned4 {
-        color: rgb(236, 230, 0);
-        font-family: Georgia, serif;
-        background-color: rgb(0, 0, 0);
-    }
-    .Skream {
-        color: #880000;
-        background-color: #0b0b0b;
-        font-family: 'Times New Roman', Times, serif
-    }
-    .PETFISH {
-        color: rgb(0, 255, 255);
-        background-color: rgb(0, 0, 160);
-        font-family: Arial, Helvetica, sans-serif;
-    }
-    .Madi {
-        color: rgb(245, 245, 245);
-        background-color: rgb(206, 147, 216);
-        font-family: Arial, Helvetica, sans-serif;
-    }
-    .Faye {
-        color: rgb(246, 40, 23);
-        background-color: rgb(41, 0, 83);
-        font-family: Copperplate, 'Copperplate Gothic', sans-serif;
-    }
-    .SwegLord {
-        color: #000000;
-        background-color: #ffffff;
-        font-family: Impact, Charcoal, sans-serif
-    }
-    .Fluff {
-        color: rgb(0, 255, 0);
-        font-family: Ubuntu, sans-serif;
-        background-color: rgb(0, 0, 0);
-    }
-    .Spek {
-        ccolor: #aeaad7;
-        background-color: #680f6a;
-        font-family: 'Trebuchet MS', Helvetica, sans-serif
-    }
-    .CyriTheCat {
-        color: rgb(0, 15, 191);
-        background-color: rgb(0, 0, 0);
-        font-family: Arial, Helvetica, sans-serif;
-    }
-    .Ehsa {
-        color: #01ebfe;
-        background-color: #3c003c;
-        font-family: Arial, Helvetica, sans-serif
-    }
-    .ghosty {
-        color: #06fff2;
-        background-color: #800080;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-
-    #metfan_and_fish {
-        width: 50px;
-        height: 50px;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        transition: all 0.5s;
-    }
-    #metfan_and_fish:hover {
-        width: 40vw!important;
-        height: 40vw!important;
-    }
-
-    .hidden {
-        opacity: 0;
-    }
-
-    .ninja {
-        display: none!important;
-    }
-
-    .toast {
-        background-color: #00B0FF;
-    }
-
-    #draft {
-        display: none;
-    }
-
-    .end_img {
-        margin-top: 50px;
-    }
-
-    .strike {
-        text-decoration: line-through;
-    }
-    .bold {
-        font-weight: 700;
-    }
-
-    #world {
-        /* Winter */
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        opacity: 0.4;
-        z-index: -10;
-    }
-
-    .award .octicon {
-        color: #ffe119;
-    }
-    .award, .important {
-        color: #ffe119;
-    }
     blockquote {
         border-left-color: #ffc554;
         font-style: italic;
@@ -279,110 +127,111 @@
         content: '”';
     }
 
-    .bigname small {
-        display: block;
-        font-size: 25%;
-        line-height: 1em;
-        font-style: italic;
-    }
-
-    .italic {
-        font-style: italic;
-    }
-
     </style>
 
 </head>
 <body>
+    <div class="container">
 
-    <div>
-        <h1 class="bigname">soot<small>Member #90 (Registered: Aug. 14, 2015)</small></h1>
-        <h5 class="disclaimer">You can't use my name in the chat!</h5>
-        <div class="divider"></div>
-        <p>
+        <div class="center-align hero">
+            <h1 class="section bold">soot<small>Member #90 (Registered: Aug. 14, 2015)</small></h1>
+            <div class="card-panel card-picture">
+                <img src="http://fluff.world/img/profile/soot.jpg">
+            </div>
+            <h5 class="section italic"><span class="strike">You can't use my name in the chat!</span> Go ahead, I don't even care</h5>
+        </div>
+        <div class="megaphone">
             <h5 class="important italic">Fluff World unofficial SOTD Archive: <a href="https://mega.nz/#F!ENJWVYgI!OuhVJeGoZo4ZAU7AL4FFAg">MEGA Shared Folder</a></h5>
         </p>
         <p>
             <h5 class="important italic">My Entire iTunes Music Library: <a href="https://mega.nz/#F!Qs8nRYjJ!oWut1SqyNfyXpxi1_EzFjQ">MEGA Shared Folder</a></h5>
-        </p>
-        <div class="divider"></div>
-        <h5>Family:</h5>
+        </div>
         <div class="section">
-            <p>
-                Fluff grandpa: <span class="embed-user Skream">Skream</span>
-            </p>
-            <p>
-                Fluff mother: <span class="embed-user zzz">zzz</span>
-            </p>
-            <p>
-                Fluff children: <span class="embed-user qwert123">QWERT123</span>, <span class="embed-user Lynx">Lynx</span>, <span class="embed-user lobster">lobster</span>, <span class="embed-user TheShinyG">G</span>, <span class="embed-user IHateBiscuits">IHateBiscuits</span>, <span class="embed-user BootySnatcher">BootySnatcher</span>, <span class="embed-user daRedLion">daRedLion</span>
-            </p>
-            <p>
-                Fluff godchildren: <span class="embed-user Zoned4">Zoned</span>
-            </p>
-            <p>
-                Fluff grandchildren: <span class="embed-user Ehsa">Ehsa</span>, <span class="embed-user CyriTheCat">CyriTheCat</span>
-            </p>
-            <p>
-                Fluff great-grandchildren: <span class="embed-user ghosty">ghosty</span>
+            <h1>Family</h1>
+            <p class="flow-text">
+                <ul>
+                    <li>
+                        Fluff grandpa: <span class="embed-user Skream">Skream</span>
+                    </li>
+                    <li>
+                        Fluff mother: <span class="embed-user zzz">zzz</span>
+                    </li>
+                    <li>
+                        Fluff children: <span class="embed-user qwert123">QWERT123</span>, <span class="embed-user Lynx">Lynx</span>, <span class="embed-user lobster">lobster</span>, <span class="embed-user TheShinyG">G</span>, <span class="embed-user IHateBiscuits">IHateBiscuits</span>, <span class="embed-user BootySnatcher">BootySnatcher</span>, <span class="embed-user daRedLion">daRedLion</span>
+                    </li>
+                    <li>
+                        Fluff godchildren: <span class="embed-user Zoned4">Zoned</span>
+                    </li>
+                    <li>
+                        Fluff grandchildren: <span class="embed-user Ehsa">Ehsa</span>, <span class="embed-user CyriTheCat">CyriTheCat</span>
+                    </li>
+                    <li>
+                        Fluff great-grandchildren: <span class="embed-user ghosty">ghosty</span>
+                    </li>
+                </ul>
             </p>
         </div>
-        <div class="divider"></div>
-        <h5>Known for:</h5>
         <div class="section">
-            <p>
-                <span class="award"><span class="octicon octicon-star"></span> <span class="bold">Fluff Award recipient for: Best Profile (11 votes, 2015)</span> <span class="octicon octicon-star"></span></span>
-            </p>
-            <p>
-                <span class="award"><span class="octicon octicon-star"></span> <span class="bold">Fluff Award recipient for: Most Productive (10 votes, 2015)</span> <span class="octicon octicon-star"></span></span>
-            </p>
-            <p>
-                <span class="award"><span class="octicon octicon-star"></span> <span class="bold">Fluff Award recipient for: Best Catchphrase (7 votes, 2015)</span> <span class="octicon octicon-star"></span></span>
-            </p>
-            <p>
-                The user who programmatically spammed the imageboard with pokémon and killed it.
-            </p>
-            <p>
-                The user who programmatically spams the torrent section for <span class="strike">points</span> the benefit of Fluff World.
-            </p>
-            <p>
-                The user who put Fluff World on their r&eacute;sum&eacute;.
-            </p>
-            <p>
-                The user who co-developed the <span title="Fluff World Minecraft">FWMC</span> Spigot plugin with Fluff.
-            </p>
-            <p>
-                The guy who brings their own salt shaker to B lunch for some reason. (If you'd like some, just ask!)
-            </p>
-            <p>
-                The guy who setup the <a href="https://mega.nz/#F!ENJWVYgI!OuhVJeGoZo4ZAU7AL4FFAg">unofficial Fluff World sotd archive</a>.
-            </p>
-            <p>
-                Developer of <a href="https://www.npmjs.com/package/fwapi">fwapi</a>, a node.js module for interacting with Fluff World
-            </p>
-            <p>
-                Developer of <a href="https://github.com/au5ton/FWMobile">FWMobile</a>.
-            </p>
-            <p>
-                Developer of <a class="strike">FWExtras (BETA)</a>, which is now discontinued until further notice.
+            <h1>Known For</h1>
+            <p class="flow-text">
+                <ul>
+                    <div class="megaphone">
+                        <li class="award">
+                            <span class="octicon octicon-star"></span> Fluff Award recipient for: Best Profile (11 votes, 2015) <span class="octicon octicon-star"></span>
+                        </li>
+                        <li class="award">
+                            <span class="octicon octicon-star"></span> Fluff Award recipient for: Most Productive (10 votes, 2015) <span class="octicon octicon-star"></span>
+                        </li>
+                        <li class="award">
+                            <span class="octicon octicon-star"></span> Fluff Award recipient for: Best Catchphrase (7 votes, 2015) <span class="octicon octicon-star"></span>
+                        </li>
+                    </div>
+                    <li>
+                        The user who programmatically spammed the imageboard with pokémon and killed it.
+                    </li>
+                    <li>
+                        The user who programmatically spams the torrent section for <span class="strike">points</span> the benefit of Fluff World.
+                    </li>
+                    <li>
+                        The user who put Fluff World on their r&eacute;sum&eacute;.
+                    </li>
+                    <li>
+                        The user who co-developed the <span title="Fluff World Minecraft">FWMC</span> Spigot plugin with Fluff.
+                    </li>
+                    <li>
+                        The guy who brings their own salt shaker to B lunch for some reason. (If you'd like some, just ask!)
+                    </li>
+                    <li>
+                        The guy who setup the <a href="https://mega.nz/#F!ENJWVYgI!OuhVJeGoZo4ZAU7AL4FFAg">unofficial Fluff World sotd archive</a>.
+                    </li>
+                    <li>
+                        Developer of <a href="https://www.npmjs.com/package/fwapi">fwapi</a>, a node.js module for interacting with Fluff World
+                    </li>
+                    <li>
+                        Developer of <a href="https://github.com/au5ton/FWMobile">FWMobile</a>.
+                    </li>
+                    <li>
+                        Developer of <a class="strike">FWExtras (BETA)</a>, which is now discontinued until further notice.
+                    </li>
+                </ul>
             </p>
         </div>
-        <div class="divider"></div>
-        <h5>Contact me at:</h5>
         <div class="section">
-            <p>
-                <a href="http://kik.me/_tuple">Kik (_tuple)</a>
-            </p>
-            <p>
-                <a href="skype:macphage_?userinfo">Skype (macphage_)</a>
-            </p>
-            <p>
-                <a href="http://steamcommunity.com/id/tortilla_machine">Steam (soot ☄)</a>
-            </p>
+            <h1>Contact Me:</h1>
+            <ul>
+                <li>
+                    <a href="http://kik.me/_tuple">Kik (_tuple)</a>
+                </li>
+                <li>
+                    <a href="skype:macphage_?userinfo">Skype (macphage_)</a>
+                </li>
+                <li>
+                    <a href="http://steamcommunity.com/id/tortilla_machine">Steam (soot ☄)</a>
+                </li>
+            </ul>
         </div>
-        <div class="divider"></div>
-        <h5>Quotes:</h5>
         <div class="section">
+            <h1>Quotes:</h1>
             <blockquote>
                 GUYS PLS IM SO IGNORED RN
             </blockquote>
@@ -506,26 +355,7 @@
                 -<span class="embed-user PETFISH">PETFISH</span>, 8:12 PM, 8/17/2016
             </p>
         </div>
-        <div class="divider"></div>
-        <h5>Random shit:</h5>
-        <div class="section">
-            <p>
-                <a href="http://austinj.net/fw-profile-page/hacking.html">Click me to look like you're hacking something important</a>
-            </p>
-            <h5>
-                Join <span class="embed-user NaN">NaN</span>!
-            </h5>
-            <img class="responsive-img" src="http://www.austinj.net/fw-profile-page/family_tree.PNG" alt="soot's fluff world family tree">
-        </div>
+
     </div>
-
-    <canvas id="world"></canvas>
-
-    <img id="metfan_and_fish" class="hidden" src="http://www.austinj.net/fw-profile-page/metfan+fish_shitquality.jpg" alt="metfan+fish 5ever">
-    <script>
-    setTimeout(function(){
-        document.getElementById('metfan_and_fish').setAttribute('class','');
-    },1000*60*10); //10 minutes
-    </script>
 </body>
 </html>
